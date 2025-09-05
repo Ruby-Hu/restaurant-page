@@ -1,1 +1,31 @@
+/* Make the body and html take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+/* Make the content div a flex container to push footer down */
+#content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make main content grow to fill available space */
+main {
+    flex: 1;
+}
+
+/* Style the footer to stick to bottom and center text */
+footer {
+    margin-top: auto; /* This pushes the footer to the bottom */
+    text-align: center; /* Centers the text horizontally */
+    padding: 16px;
+    background-color: #f0f0f0; /* Optional: add background color */
+}
+
+/* Center the copyright text specifically */
+footer p {
+    margin: 0; /* Remove default margin */
+}

@@ -1,4 +1,4 @@
 import initialize from './initialize.js';
-import './style.css';
+import * as css from "./style.css";
 
 initialize();
