@@ -9,7 +9,7 @@ function createContact() {
     address.textContent = "888 Restaurant Drive"
 
     const location = document.createElement("img");
-    location.src = "";
+    location.src = "./images/maplocation.png";
     location.alt = "restaurant location map";
 
     contact.appendChild(tel);

@@ -1,4 +1,11 @@
 /* Make the body and html take full height */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -10,11 +17,44 @@ html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--primary-color);
+    
+}
+
+header {
+    margin: 40px;
+    background-color: var(--primary-color);
+    text-align: center;
 }
 
 /* Make main content grow to fill available space */
 main {
     flex: 1;
+    margin: 0 40px 40px 40px;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+nav {
+    margin: 0 40px;
+    background-color: var(--primary-color);
+    display: flex;
+}
+
+.nav-button {
+    flex: 1;
+    padding: 16px 0;
+    background-color: var(--secondary-color);
+    clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+    border: none;
+}
+
+.nav-button.active {
+    background-color: var(--background-color);
 }
 
 /* Style the footer to stick to bottom and center text */
