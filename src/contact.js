@@ -1,3 +1,5 @@
+import map from "./images/maplocation.png";
+
 function createContact() {
     const contact = document.createElement('div');
     contact.classList.add("contact");
@@ -9,7 +11,7 @@ function createContact() {
     address.textContent = "888 Restaurant Drive"
 
     const location = document.createElement("img");
-    location.src = "./images/maplocation.png";
+    location.src = map;
     location.alt = "restaurant location map";
 
     contact.appendChild(tel);

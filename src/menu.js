@@ -1,36 +1,39 @@
+import food from "./images/Snoopy-doghouse-1.jpeg";
+
 function createMenu() {
     const menu = document.createElement("div");
     menu.classList.add("menu");
 
-    const seasonal = document.createElement("h1");
-    seasonal.classList.add("seasonal");
-    seasonal.textContent = "Seasonal Specials"
+    const menuItems = document.createElement("div");
+    menuItems.classList.add("menu-items");
 
-    const menuIntro = document.createElement("p");
-    menuIntro.textContent = "For the full menu please view here."
+    const menuTitle = document.createElement("h1");
+    menuTitle.classList.add("menu-title");
+    menuTitle.textContent = "Menu"
 
-    menu.appendChild(seasonal);
-    menu.appendChild(createMenuItem(
+    menu.appendChild(menuTitle);
+
+    menuItems.appendChild(createMenuItem(
         "menuItem 1",
         "whatever ingredient that's inside"
     ));
 
-    menu.appendChild(createMenuItem(
+    menuItems.appendChild(createMenuItem(
         "menuItem 2",
         "whatever ingredient that's inside"
     ));
 
-    menu.appendChild(createMenuItem(
+    menuItems.appendChild(createMenuItem(
         "menuItem 3",
         "whatever ingredient that's inside"
     ));
 
-    menu.appendChild(createMenuItem(
+    menuItems.appendChild(createMenuItem(
         "menuItem 4",
         "whatever ingredient that's inside"
     ));
 
-    menu.appendChild(menuIntro);
+    menu.appendChild(menuItems);
 
     return menu;
 }
@@ -43,7 +46,7 @@ function createMenuItem(name, description) {
     foodName.textContent = name;
 
     const foodImg = document.createElement("img");
-    foodImg.src = "";
+    foodImg.src = food;
     foodImg.alt = "food pic";
 
     const foodDescription = document.createElement("p");
